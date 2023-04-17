@@ -1,5 +1,7 @@
 # Netclix
 
+## Available at https://gregor-hubrich.de/netclix
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
 ## Development server
