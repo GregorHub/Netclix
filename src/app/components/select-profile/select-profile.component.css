@@ -1,0 +1,36 @@
+.user-img {
+  width: 10rem;
+  height: 10rem;
+  background-color: red;
+  margin: auto;
+  margin-top: 10rem;
+  background-size: contain;
+  background-image: url("http://occ-0-1556-1555.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABUawQ9WDc25EacAMPCA85Dw6DvTdMlsZEAwKzq9DQcoj8PsS9LEkr3nJj_a9YLeHOgTgZJd833fX5NioydaYCbk7uNvrInnc68vM.png?r=18");
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 2px rgba(255, 255, 255, 0) solid;
+}
+
+.user-img:hover {
+  border: 2px white solid;
+  border-radius: 0.5rem;
+}
+
+.username {
+  color: white;
+  position: relative;
+  bottom: -10rem;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.title {
+  width: 100%;
+
+  margin: auto;
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 3rem;
+  color: white;
+}

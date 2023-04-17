@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+
+  top: -15vh;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgb(255, 255, 255);
+  margin-left: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.carusell {
+  height: 28rem;
+
+  padding-left: 3rem;
+  padding-top: 2.5rem;
+  overflow: hidden;
+}
+
+.btn-c-left {
+  height: 5vh;
+  color: white;
+  position: absolute;
+  left: 0.5rem;
+  top: 11.5rem;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.btn-c-right {
+  color: white;
+  position: absolute;
+  right: 0rem;
+  width: 10rem;
+  top: 5rem;
+  z-index: 100000;
+  height: 22.5rem;
+  text-align: center;
+  line-height: 20rem;
+  font-size: 5rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+.btn-c-left:hover {
+  color: rgb(230, 230, 230);
+}
+.btn-c-right:hover {
+  color: rgb(230, 230, 230);
+}

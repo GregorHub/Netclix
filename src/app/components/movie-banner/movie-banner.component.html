@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="title">{{ title }}</div>
+  <div class="carusell d-flex flex-row">
+    <div class="btn-c-left" (click)="reShiftList()">‹</div>
+    <div class="btn-c-right" (click)="shiftList()">›</div>
+
+    <div *ngFor="let i of itemList">
+      <movie-card [item]="i" [enableSub]="true"></movie-card>
+    </div>
+  </div>
+</div>

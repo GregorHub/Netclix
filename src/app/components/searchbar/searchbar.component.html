@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <form [formGroup]="searchForm" (ngSubmit)="search()">
+    <div class="row">
+      <div class="search-bar">
+        <input
+          type="text"
+          class="form-control bar"
+          formControlName="movieName"
+          placeholder="serch"
+        />
+      </div>
+
+      <div class="search-btn" (click)="search()">search</div>
+    </div>
+  </form>
+</div>

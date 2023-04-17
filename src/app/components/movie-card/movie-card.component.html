@@ -1,0 +1,32 @@
+<div
+  (mouseover)="changeText = true"
+  (mouseleave)="changeText = false"
+  class="card d-inline-flex"
+>
+  <img
+    src="{{ 'https://image.tmdb.org/t/p/original/' + item.fetch.poster_path }}"
+    class="card-img"
+  />
+  <div class="card-img-overlay">
+    <div *ngIf="enableSub && changeText">
+      <div class="card-footer">
+        <div class="btn-dash">
+          <div class="play" (click)="play()">▶ Play</div>
+          <div
+            class="add"
+            title="save for later"
+            *ngIf="!this.isItemInSaved(this.item.id)"
+            (click)="addToUserList()"
+          >
+            &plus;
+          </div>
+        </div>
+
+        <div *ngIf="enableSub" class="sub-info">
+          Release: {{ item.fetch.release_date }} <br />Voted:
+          {{ item.fetch.vote_average }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="wrapper" [ngClass]="style">
+  <div class="logo" (click)="navigate('home')">
+    <img class="logo-img" src="./assets/netflix.png" />
+  </div>
+  <div class="nav">
+    <div class="nav-btn" (click)="navigate('home')">Home</div>
+    <div class="nav-btn" (click)="navigate('myList')">My List</div>
+  </div>
+  <searchbar></searchbar>
+  <div class="logout" (click)="logout()"></div>
+</div>
