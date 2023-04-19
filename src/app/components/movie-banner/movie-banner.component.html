@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" [hidden]="itemList.length < 1">
   <div class="title">{{ title }}</div>
   <div class="carusell d-flex flex-row">
     <div class="btn-c-left" (click)="reShiftList()">‹</div>

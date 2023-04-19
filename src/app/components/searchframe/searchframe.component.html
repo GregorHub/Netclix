@@ -1,4 +1,12 @@
 <header></header>
 <div class="wrapper">
   <movie-banner [title]="'Search'" [itemList]="searchResult"></movie-banner>
+
+  <div class="no-res" [hidden]="searchResult.length != 0">
+    Your search for "{{ searchWord }}" did not have any matches. Suggestions:
+    <ul>
+      <li>Try different keywords</li>
+      <li>Try using a movie, TV show title, an actor or director</li>
+    </ul>
+  </div>
 </div>

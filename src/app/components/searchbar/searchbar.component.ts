@@ -34,7 +34,9 @@ export class SearchbarComponent {
             arr.push(new WatchItem(element.title, element.id, element));
           });
 
-          this.router.navigateByUrl('/search', { state: [arr] });
+          this.router.navigateByUrl('/search', {
+            state: [arr, this.searchForm.value],
+          });
         }
       }
     );

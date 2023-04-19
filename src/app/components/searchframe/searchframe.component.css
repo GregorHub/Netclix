@@ -4,3 +4,11 @@
 
   width: 90rem;
 }
+
+.no-res {
+  color: white;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  font-size: 2rem;
+}

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class SearchframeComponent {
   searchResult: any = [];
-
+  searchWord: any = [];
   constructor(
     private location: Location,
 
@@ -20,6 +20,7 @@ export class SearchframeComponent {
     router.events.subscribe((e) => {
       let res = this.location.getState();
       this.searchResult = res['0'];
+      this.searchWord = res['1'].movieName;
     });
   }
   ngOnInit() {
