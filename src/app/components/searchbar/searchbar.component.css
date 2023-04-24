@@ -5,7 +5,7 @@
   font-size: 1rem;
   z-index: 2222222222222222222;
   position: fixed;
-  right: 5rem;
+  right: 8rem;
   top: 2rem;
 }
 
@@ -24,23 +24,25 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .search-btn {
-  width: 5.5rem;
+  width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
   padding-left: 0.8rem;
   border-radius: 0.5rem;
-  font-size: 1rem;
-  background-color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+
   margin-right: 0.5rem;
   cursor: pointer;
+  text-align: center;
 }
 .search-btn:hover {
-  background-color: rgb(26, 26, 26);
+  background-color: rgba(26, 26, 26, 0);
 }
 
 .search-btn:active {

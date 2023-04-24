@@ -6,6 +6,7 @@
   <img
     src="{{ 'https://image.tmdb.org/t/p/original/' + item.fetch.poster_path }}"
     class="card-img"
+    onerror="this.onerror=null; this.src='https://t3.ftcdn.net/jpg/05/08/88/82/360_F_508888212_50sPZWAnDEe0IdZGwd5fb1CUDEFPNJgy.jpg'"
   />
   <div class="card-img-overlay">
     <div *ngIf="enableSub && changeText">

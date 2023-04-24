@@ -15,30 +15,41 @@ export class SearchbarComponent {
     movieName: new FormControl(null),
   });
 
+  extended = true;
   constructor(
     private MovieServiceApi: MovieapiService,
     private router: Router
   ) {}
 
+  extend() {
+    if (this.extended == true) {
+      this.extended = false;
+    } else {
+      this.extended = true;
+    }
+  }
+
   /**
    * search the moviedb for movies
    */
   search() {
-    this.searchResult = [];
-    this.MovieServiceApi.getSearchMovie(this.searchForm.value).subscribe(
-      (result) => {
-        if (result.results) {
-          let arr: WatchItem[] = [];
-          this.searchResult = result.results;
-          this.searchResult.forEach((element) => {
-            arr.push(new WatchItem(element.title, element.id, element));
-          });
+    if (this.searchForm.value) {
+      this.searchResult = [];
+      this.MovieServiceApi.getSearchMovie(this.searchForm.value).subscribe(
+        (result) => {
+          if (result.results) {
+            let arr: WatchItem[] = [];
+            this.searchResult = result.results;
+            this.searchResult.forEach((element) => {
+              arr.push(new WatchItem(element.title, element.id, element));
+            });
 
-          this.router.navigateByUrl('/search', {
-            state: [arr, this.searchForm.value],
-          });
+            this.router.navigateByUrl('/search', {
+              state: [arr, this.searchForm.value],
+            });
+          }
         }
-      }
-    );
+      );
+    }
   }
 }
