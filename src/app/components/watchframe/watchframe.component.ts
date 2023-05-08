@@ -9,7 +9,7 @@ import { MovieapiService } from 'src/app/services/movieapi.service';
 })
 export class WatchframeComponent implements OnInit {
   watchItem: WatchItem;
-  getMovieVideoResult: any;
+  getMovieVideoResult: any = '';
 
   constructor(
     private location: Location,
@@ -26,11 +26,13 @@ export class WatchframeComponent implements OnInit {
   findTrailer() {
     this.MovieApiService.getMovieVideo(this.watchItem.id).subscribe(
       (result) => {
-        result.results.forEach((element: any) => {
-          if (element.type == 'Trailer') {
-            this.getMovieVideoResult = element.key;
-          }
-        });
+        if (result) {
+          result.results.forEach((element: any) => {
+            if (element.type == 'Trailer') {
+              this.getMovieVideoResult = element.key;
+            }
+          });
+        }
       }
     );
   }

@@ -1,4 +1,8 @@
 <header></header>
+<div class="no-res" *ngIf="getMovieVideoResult == ''">
+  we are sorry, there is no trailer available for
+  <i>{{ watchItem.fetch.name }}</i>
+</div>
 <div class="vid-wrap">
   <youtube-player videoId="{{ getMovieVideoResult }}"> </youtube-player>
 </div>

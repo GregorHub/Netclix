@@ -4,3 +4,11 @@
   margin-top: 20vh;
   text-align: center;
 }
+
+.no-res {
+  color: white;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  font-size: 2rem;
+}
